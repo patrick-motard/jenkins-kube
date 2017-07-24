@@ -1,8 +1,7 @@
 FROM nginx:stable
 MAINTAINER Patrick Motard
 
-RUN rm /etc/nginx/conf.d/default.conf && \
-    rm /etc/nginx/conf.d/example_ssl.conf
+RUN rm /etc/nginx/conf.d/default.conf 
 
 COPY conf/jenkins.conf /etc/nginx/conf.d/jenkins.conf
 COPY conf/nginx.conf /etc/nginx/nginx.conf
